@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="MyProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid  x:Name="myGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+            </Grid.ColumnDefinitions>
+
+            
+            <Button x:Name="Red_Meat" Grid.Column="0" Height="318" Width="513" FontSize="50" Background="PaleVioletRed" >Red Meat</Button>
+            <Button x:Name="White_Meat" Grid.Column="1" Height="318" Width="513" FontSize="50" Background="AntiqueWhite" >White Meat</Button>
+            <Button x:Name="Smoke_Meat" Grid.Column="2" Height="318" Width="513" FontSize="50" Background="Firebrick" >Smoked Meat</Button>
+            <Button x:Name="Fish" Grid.Column="0" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="PeachPuff" >Fish</Button>
+            <Button x:Name="Shellfish" Grid.Column="1" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="LightPink" >ShellFish</Button>
+            <Button x:Name="Carbs" Grid.Column="2" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="DarkGoldenrod" >Carbohydrates</Button>
+            <Button x:Name="Desert" Grid.Column="0" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="RosyBrown" >Desert</Button>
+            <Button x:Name="Cheese" Grid.Column="1" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="Yellow" >Cheese</Button>
+            <Button x:Name="Vegetables" Grid.Column="2" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="GreenYellow">Vegetables</Button>
+        </Grid>
+    </Grid>
+</Page>
