@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="MyProject.Red_Meat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.ColumnSpan="3" Background="PaleVioletRed" />
+            <TextBlock Grid.Row="0" Grid.Column="1" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center">Red Meat</TextBlock>
+            <Button x:Name="home_bttn" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Click="Home_Bttn_Click" >Home</Button>
+           
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="BoldRedWine" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Width="450" Background="DarkRed" Click="BoldRedWine_Click">Strong Red Wine</Button>
+                <Button x:Name="RedWine" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Width="450" Background="IndianRed" Click="RedWine_Click"> Medium Red Wine</Button>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock x:Name="TextBoldRedWine" Visibility="Collapsed"  FontSize="40">• Cabernet Sauvignon <LineBreak/>• Monastrell <LineBreak/>• Aglianico <LineBreak/>• Malbec <LineBreak/>• Syrah</TextBlock>
+                    <TextBlock x:Name="TextRedWine" Visibility="Collapsed"  FontSize="40">• Red Table Wine <LineBreak/>• tempranillo <LineBreak/>• Sangiovese <LineBreak/>• Zinfandel <LineBreak/>• Grenache <LineBreak/>• Meriot</TextBlock>
+                </StackPanel>
+            </Grid>
+            <TextBlock Grid.Column="0" Grid.Row="2" Width="500" Height="120" FontSize="30">Please leave a comment here <LineBreak/> for us if you dont agree with <LineBreak/> the pairing</TextBlock>
+            <TextBox Background="White" Grid.Column="0" Grid.Row="2" Width="700" Height="120" Grid.ColumnSpan="3"  />
+        </Grid>
+        
+    </Grid>
+</Page>
