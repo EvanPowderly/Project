@@ -21,62 +21,29 @@ namespace MyProject
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Smoked_Meat : Page
+    public sealed partial class Shell_Fish : Page
     {
-        public Smoked_Meat()
+        public Shell_Fish()
         {
             this.InitializeComponent();
         }
-
         private void Home_Bttn_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage), null);
         }
 
-        private void BoldRedWine_Click(object sender, RoutedEventArgs e)
-        {
-            TextBoldRedWine.Visibility = Visibility.Visible;
-            TextRedWine.Visibility = Visibility.Collapsed;
-            TextLightRedWine.Visibility = Visibility.Collapsed;
-            TextDesertWine.Visibility = Visibility.Collapsed;
-            TextSweetWhiteWine.Visibility = Visibility.Collapsed;
-
-        }
-
-        private void DesertWine_Click(object sender, RoutedEventArgs e)
-        {
-            TextBoldRedWine.Visibility = Visibility.Collapsed;
-            TextRedWine.Visibility = Visibility.Collapsed;
-            TextLightRedWine.Visibility = Visibility.Collapsed;
-            TextDesertWine.Visibility = Visibility.Visible;
-            TextSweetWhiteWine.Visibility = Visibility.Collapsed;
-        }
-
-        private void RedWine_Click(object sender, RoutedEventArgs e)
-        {
-            TextBoldRedWine.Visibility = Visibility.Collapsed;
-            TextRedWine.Visibility = Visibility.Visible;
-            TextLightRedWine.Visibility = Visibility.Collapsed;
-            TextDesertWine.Visibility = Visibility.Collapsed;
-            TextSweetWhiteWine.Visibility = Visibility.Collapsed;
-        }
-
         private void LightRedWine_Click(object sender, RoutedEventArgs e)
         {
-            TextBoldRedWine.Visibility = Visibility.Collapsed;
-            TextRedWine.Visibility = Visibility.Collapsed;
             TextLightRedWine.Visibility = Visibility.Visible;
-            TextDesertWine.Visibility = Visibility.Collapsed;
-            TextSweetWhiteWine.Visibility = Visibility.Collapsed;
+            TextRichWhiteWine.Visibility = Visibility.Collapsed;
         }
 
-        private void SweetWhiteWine_Click(object sender, RoutedEventArgs e)
+    
+
+        private void RichWhiteWine_Click(object sender, RoutedEventArgs e)
         {
-            TextBoldRedWine.Visibility = Visibility.Collapsed;
-            TextRedWine.Visibility = Visibility.Collapsed;
+            TextRichWhiteWine.Visibility = Visibility.Visible;
             TextLightRedWine.Visibility = Visibility.Collapsed;
-            TextDesertWine.Visibility = Visibility.Collapsed;
-            TextSweetWhiteWine.Visibility = Visibility.Visible;
         }
 
         public async void Make_File()
@@ -100,8 +67,8 @@ namespace MyProject
             Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile myFile = await storageFolder.GetFileAsync("Comments.txt");
 
-
-            await Windows.Storage.FileIO.AppendTextAsync(myFile, "SMOKED MEAT COMMENT" + Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, "SHELL FISH COMMENT" + Environment.NewLine);
             await Windows.Storage.FileIO.AppendTextAsync(myFile, wine + Environment.NewLine);
             await Windows.Storage.FileIO.AppendTextAsync(myFile, food + Environment.NewLine);
             await Windows.Storage.FileIO.AppendTextAsync(myFile, Comment + Environment.NewLine);

@@ -34,6 +34,7 @@ namespace MyProject
 
         private void White_Meat_Click(object sender, RoutedEventArgs e)
         {
+           //  White_Meat.BorderBrush = Brush.Black ;
             Frame.Navigate(typeof(White_Meat), null);
         }
 
@@ -44,31 +45,37 @@ namespace MyProject
 
         private void Fish_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Fish), null);
         }
         private void ShellFish_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Shell_Fish), null);
         }
 
         private void Carbs_Click(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(carbs), null);
 
         }
 
         private void Desert_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Desert), null);
         }
 
         private void Cheese_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Cheese), null);
         }
 
         private void Vegetables_Click(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(Vegetables), null);
+        }
 
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Login), null);
         }
     }
 }

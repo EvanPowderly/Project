@@ -10,26 +10,33 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid  x:Name="frontPage">
             <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
                 <RowDefinition Height="30*" />
                 <RowDefinition Height="30*" />
                 <RowDefinition Height="30*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="31*" />
-                <ColumnDefinition Width="31*" />
-                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="25*" />
+                <ColumnDefinition Width="25*" />
+                <ColumnDefinition Width="25*" />
             </Grid.ColumnDefinitions>
-
             
-            <Button x:Name="Red_Meat" Grid.Column="0" Height="318" Width="513" FontSize="50" Background="PaleVioletRed" Click="Red_Meat_Click" >Red Meat</Button>
-            <Button x:Name="White_Meat" Grid.Column="1" Height="318" Width="513" FontSize="50" Background="AntiqueWhite" Click="White_Meat_Click" >White Meat</Button>
-            <Button x:Name="Smoke_Meat" Grid.Column="2" Height="318" Width="513" FontSize="50" Background="Firebrick" Click="Smoke_Meat_Click" >Smoked Meat</Button>
-            <Button x:Name="Fish" Grid.Column="0" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="PeachPuff" Click="Fish_Click" >Fish</Button>
-            <Button x:Name="Shellfish" Grid.Column="1" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="LightPink"  >ShellFish</Button>
-            <Button x:Name="Carbs" Grid.Column="2" Grid.Row="1" Height="318" Width="513" FontSize="50" Background="DarkGoldenrod" Click="Carbs_Click" >Carbohydrates</Button>
-            <Button x:Name="Desert" Grid.Column="0" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="RosyBrown" Click="Desert_Click" >Desert</Button>
-            <Button x:Name="Cheese" Grid.Column="1" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="Yellow" Click="Cheese_Click" >Cheese</Button>
-            <Button x:Name="Vegetables" Grid.Column="2" Grid.Row="2" Height="318" Width="513" FontSize="50" Background="GreenYellow" Click="Vegetables_Click">Vegetables</Button>
+
+
+            <StackPanel Grid.Column="0"  Grid.ColumnSpan="3" Background="MediumVioletRed" BorderBrush="Black" BorderThickness="4" >
+                <Button x:Name="SignUp" FontSize="30" HorizontalAlignment="Left" Height="60" Width="200" Background="CornflowerBlue" Margin="50,51,0,0" Click="SignUp_Click" BorderBrush="Black" BorderThickness="5">Sign Up</Button>
+                <TextBlock FontSize="70" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,-70,0,0" FontFamily="Gabriola" >Food And Wine Matcher</TextBlock>
+            </StackPanel>
+            <Button x:Name="Red_Meat" Grid.Column="0" Grid.Row="1" Height="210" Width="513" FontSize="50" Background="PaleVioletRed" Click="Red_Meat_Click" BorderBrush="Black" BorderThickness="20"  >Red Meat</Button>
+            <Button x:Name="White_Meat" Grid.Column="1" Grid.Row="1" Height="210" Width="513" FontSize="50" Background="AntiqueWhite" Click="White_Meat_Click" BorderBrush="Black" BorderThickness="20"  >White Meat</Button>
+            <Button x:Name="Smoke_Meat" Grid.Column="2" Grid.Row="1" Height="210" Width="513" FontSize="50" Background="Firebrick" Click="Smoke_Meat_Click" BorderBrush="Black" BorderThickness="20" >Smoked Meat</Button>
+            <Button x:Name="Fish" Grid.Column="0" Grid.Row="2" Height="210" Width="513" FontSize="50" Background="PeachPuff" Click="Fish_Click" BorderBrush="Black" BorderThickness="20" >Fish</Button>
+            <Button x:Name="Shellfish" Grid.Column="1" Grid.Row="2" Height="210" Width="513" FontSize="50" Background="LightPink" Click="ShellFish_Click" BorderBrush="Black" BorderThickness="20"  >ShellFish</Button>
+            <Button x:Name="Carbs" Grid.Column="2" Grid.Row="2" Height="210" Width="513" FontSize="50" Background="DarkGoldenrod" Click="Carbs_Click" BorderBrush="Black" BorderThickness="20"  >Pasta, Breads, Rice</Button>
+            <Button x:Name="Desert" Grid.Column="0" Grid.Row="3" Height="211" Width="513" FontSize="50" Background="RosyBrown" Click="Desert_Click" BorderBrush="Black" BorderThickness="20"  >Dessert</Button>
+            <Button x:Name="Cheese" Grid.Column="1" Grid.Row="3" Height="211" Width="513" FontSize="50" Background="Yellow" Click="Cheese_Click" BorderBrush="Black" BorderThickness="20"  >Cheese</Button>
+            <Button x:Name="Vegetables" Grid.Column="2" Grid.Row="3" Height="211" Width="513" FontSize="50" Background="GreenYellow" Click="Vegetables_Click" BorderBrush="Black" BorderThickness="20"  >Vegetables</Button>
+           
         </Grid>
     </Grid>
 </Page>

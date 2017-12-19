@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="MyProject.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="MediumVioletRed">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+                <ColumnDefinition Width="31*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="0" FontSize="100" VerticalAlignment="Center" HorizontalAlignment="Center" >SignUp</TextBlock>
+            <StackPanel Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+                <TextBlock FontSize="30" >SignUp for our newsletter to find out any new pairings we come accross</TextBlock>
+            </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="1"  >
+            <Grid x:Name="Details">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*" />
+                    <ColumnDefinition Width="31*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                    <RowDefinition Height="30*" />
+                </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Height="20" HorizontalAlignment="Center"  x:Name ="errormessage" VerticalAlignment="Top" Width="300"   Foreground="Yellow" />
+                    <TextBlock Grid.Row="1" HorizontalAlignment="Center"  Name="textBlockFirstname" Text="First Name:" VerticalAlignment="Top" Width="120" />
+                    <TextBlock Grid.Row="2" HorizontalAlignment="Center"  Name="textBlockLastName" Text="Last Name:" VerticalAlignment="Top" Width="120" />
+                    <TextBlock Grid.Row="3" HorizontalAlignment="Center"  Name="textBlockEmailId" Text="Email" VerticalAlignment="Top" Width="120" />
+                    <TextBlock Grid.Row="4" HorizontalAlignment="Center"  Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="120"  />
+                    <TextBlock Grid.Row="5" HorizontalAlignment="Center"  Name="textBlockConfirmPwd" Text="ConfirmPassword:" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" />
+
+
+                    <TextBox Grid.Row="1"  Grid.Column="1" Height="23" HorizontalAlignment="Center"  Name="textBoxFirstName" VerticalAlignment="Top" Width="222" />
+                    <TextBox Grid.Row="2"  Grid.Column="1" Height="23" HorizontalAlignment="Center"  Name="textBoxLastName" VerticalAlignment="Top" Width="222" />
+                    <TextBox Grid.Row="3" Grid.Column="1" Height="23" HorizontalAlignment="Center"  Name="textBoxEmail" VerticalAlignment="Top" Width="222" />
+
+                    <PasswordBox Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Center"  Name="passwordBox1" VerticalAlignment="Top" Width="222" />
+                    <!--For password-->
+                    <PasswordBox Grid.Row="5" Grid.Column="1" Height="23" HorizontalAlignment="Center"  Name="passwordBoxConfirm" VerticalAlignment="Top" Width="222" />
+                        <Grid Grid.Row="6" Grid.Column="0"  Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="31*" />
+                            <ColumnDefinition Width="31*" />
+                            <ColumnDefinition Width="31*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" Content="Submit" Height="35" HorizontalAlignment="Center"   Name="Submit" VerticalAlignment="Top" Click="Submit_Click" Width="70"  />
+                        <Button Grid.Column="1" Content="Reset" Height="35" HorizontalAlignment="Center"  Name="Reset" VerticalAlignment="Top" Click="Reset_Click" Width="70"  />
+                        <Button Grid.Column="2" Content="Cancel" Height="35" HorizontalAlignment="Center"  Name="Cancel" VerticalAlignment="Top" Click="Close_Click" Width="70"  />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

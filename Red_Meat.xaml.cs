@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.Storage;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -42,6 +43,48 @@ namespace MyProject
         {
             TextBoldRedWine.Visibility = Visibility.Collapsed;
             TextRedWine.Visibility = Visibility.Visible;
+        }
+
+        public async void Make_File()
+        {
+            StorageFolder appFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync("Comments.txt", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+        }
+
+
+
+        private async void Send_Click(object sender, RoutedEventArgs e)
+        {
+
+            Make_File();
+
+            String Comment = CommentSection.Text;
+            String food = FoodCommentSection.Text;
+            String wine = WineCommentSection.Text;
+
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile myFile = await storageFolder.GetFileAsync("Comments.txt");
+
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, "RED MEAT COMMENT" + Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, wine + Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, food + Environment.NewLine);
+            await Windows.Storage.FileIO.AppendTextAsync(myFile, Comment + Environment.NewLine);
+
+
+            WineCommentSection.Text = "";
+            FoodCommentSection.Text = "";
+            CommentSection.Text = "";
+        }
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+
+
         }
     }
 }
